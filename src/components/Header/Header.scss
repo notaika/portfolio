@@ -1,6 +1,74 @@
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins';
 
 .header {
     background-color: $primary-color;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    
+    @include mixins.desktop {
+        min-height: 98vh;
+    }
+    
+    &__intro {
+        margin: 0 auto;
+        width: clamp(290px, 50%, 50rem);
+
+        &-text {
+            font-size: clamp(1.1rem, 2vw, 2rem);
+        }
+        &-name {
+            font-size: clamp(2.75rem, 5vw, 6rem);
+            text-align: center;
+        }
+        &-job {
+            font-size: clamp(1.6rem, 4vw, 3.5rem);
+            text-align: center;
+        }
+        &-location {
+            font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+            text-align: right;
+            padding-top: 0.5rem;
+        }
+    }
+
+    &-btn {
+        background-color: rgba(255, 255, 255, 0.588);
+        border: 0 solid #E5E7EB;
+        box-sizing: border-box;
+        color: red;
+        display: flex;
+        margin: clamp(1rem, 3vw, 3rem) auto;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        font-weight: 700;
+        justify-content: center;
+        line-height: 1.75rem;
+        padding: .75rem 1.65rem;
+        width: clamp(12rem, 30%, 460px);
+        cursor: pointer;
+        transform: rotate(-2deg);
+        user-select: none;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border: 1px solid red;
+            bottom: 4px;
+            left: 4px;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+        }
+
+        &:hover:after {
+            bottom: 2px;
+            left: 2px;
+        }
+    }
 }

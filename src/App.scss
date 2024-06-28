@@ -3,6 +3,7 @@
 
 #root {
   max-width: 1920px;
+  min-width: 320px;
 }
 
 * {
@@ -11,4 +12,11 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
