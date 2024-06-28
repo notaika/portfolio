@@ -15,17 +15,19 @@
     
     &__intro {
         margin: 0 auto;
-        width: clamp(290px, 50%, 50rem);
+        width: clamp(290px, 50%, 40rem);
+        position: relative;
+        z-index: 2;
 
         &-text {
-            font-size: clamp(1.1rem, 2vw, 2rem);
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
         }
         &-name {
-            font-size: clamp(2.75rem, 5vw, 6rem);
+            font-size: clamp(2.75rem, 5vw, 4rem);
             text-align: center;
         }
         &-job {
-            font-size: clamp(1.6rem, 4vw, 3.5rem);
+            font-size: clamp(1.6rem, 4vw, 2.5rem);
             text-align: center;
         }
         &-location {
@@ -36,18 +38,18 @@
     }
 
     &-btn {
-        background-color: rgba(255, 255, 255, 0.588);
-        border: 0 solid #E5E7EB;
+        background-color: white;
+        border: 0 solid $primary-color;
         box-sizing: border-box;
         color: red;
         display: flex;
-        margin: clamp(1rem, 3vw, 3rem) auto;
+        margin: clamp(1rem, 3vw, 1.75rem) auto;
         font-size: clamp(1rem, 2vw, 1.2rem);
         font-weight: 700;
         justify-content: center;
         line-height: 1.75rem;
         padding: .75rem 1.65rem;
-        width: clamp(12rem, 30%, 460px);
+        width: clamp(12rem, 30%, 350px);
         cursor: pointer;
         transform: rotate(-2deg);
         user-select: none;
@@ -69,6 +71,61 @@
         &:hover:after {
             bottom: 2px;
             left: 2px;
+        }
+
+        @include mixins.desktop {
+            background-color: $tertiary-color;
+        }
+    }
+
+    &__hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-speech {
+            display: none;
+            position: absolute;
+            z-index: 0;
+            margin: 0 auto;
+            padding: clamp(2rem, 2vw, 1em);
+            width: clamp(15em, 50%, 43rem);
+            height: clamp(5em, 25vw, 23rem);
+            border-radius: .25em;
+            transform: rotate(-4deg) rotateY(15deg);
+            background: #629bdd;
+
+            @include mixins.desktop {
+                display: block;
+            }
+
+            &:before, &:after {
+                display: none;
+                position: absolute;
+                z-index: -1;
+                content: '';
+
+                @include mixins.desktop {
+                    display: block;
+                }
+            }
+
+            &:before {
+                border: solid 0 transparent;
+                border-right: solid 3.5em #f4fbfe;
+                border-bottom: solid .25em #629bdd;
+                bottom: .25em; left: 1.25em;
+                width: 0; height: 1em;
+                transform: rotate(45deg) skewX(75deg);
+            }
+
+            &:after {
+                top: 0; right: 0; bottom: 0; left: 0;
+                border-radius: inherit;
+                transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
+                background: #f4fbfe;
+            }
         }
     }
 }
