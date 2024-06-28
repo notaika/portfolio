@@ -1,0 +1,6 @@
+@use '../../styles/partials/variables' as *;
+
+.header {
+    background-color: $primary-color;
+    padding: 1rem;
+}
