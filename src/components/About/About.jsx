@@ -71,8 +71,6 @@ export default function About() {
             <img src={gitIcon} alt="Git icon" className="skills-icon" />
           </div>
         </section>
-
-
     </main>
   )
 }

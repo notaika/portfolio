@@ -1,6 +1,4 @@
 import React from 'react';
-import laptopImage from '../../assets/images/laptop.png';
-import speechBubble from '../../assets/images/bubble-chat.png';
 import './Header.scss';
 
 export default function Header() {
