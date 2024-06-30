@@ -12,20 +12,28 @@ export default function Navbar() {
         <a href="#header" className="navbar__logo-link"><img src={navbarLogo} alt="Aika logo for the navbar that links to home" className="navbar__logo" /></a>
         <ul className="navbar__list">
             <li className="navbar__list-item">
-                <img src={aboutIcon} alt="" className="navbar__list-item-icon" />
-                <a href="" className="navbar__list-text">About</a>
-                </li>
-            <li className="navbar__list-item">
-                <img src={projectsIcon} alt="" className="navbar__list-item-icon" />
-                <a href="" className="navbar__list-text">Projects</a></li>
-            <li className="navbar__list-item">
-                <img src={contactIcon} alt="" className="navbar__list-item-icon" />
-                <a href="" className="navbar__list-text">Contact</a>
+                <a href="#about" className="navbar__list-title">
+                    <img src={aboutIcon} alt="User icon for about" className="navbar__list-item-icon" /> 
+                    <span className="navbar__list-text">About</span>
+                </a>
             </li>
             <li className="navbar__list-item">
-                <img src={downloadIcon} alt="" className="navbar__list-item-icon" />
-                <a href="" className="navbar__list-text">Resume</a>
-                </li>
+                <a href="" className="navbar__list-title"> 
+                    <img src={projectsIcon} alt="" className="navbar__list-item-icon" />
+                    <span className="navbar__list-text">Projects</span>
+                </a>
+            </li>
+            <li className="navbar__list-item">
+                <a href="" className="navbar__list-title"> 
+                    <img src={contactIcon} alt="" className="navbar__list-item-icon" />
+                    <span className="navbar__list-text">Contact</span>
+                </a>
+            </li>
+            <li className="navbar__list-item">
+                <a href="" className="navbar__list-title"> 
+                    <img src={downloadIcon} alt="" className="navbar__list-item-icon" />
+                    <span className="navbar__list-text">Resume</span></a>
+            </li>
         </ul>
     </nav>
   )
