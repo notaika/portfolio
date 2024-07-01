@@ -11,6 +11,7 @@ import reactIcon from "../../assets/icons/react.svg";
 import sassIcon from "../../assets/icons/sass.svg";
 import habitScreenshots from "../../data/habitScreenshots";
 import instockScreenshots from "../../data/instockScreenshots";
+import brainflixScreenshots from "../../data/brainflixScreenshots";
 import "./Projects.scss";
 
 export default function Projects() {
@@ -29,8 +30,10 @@ export default function Projects() {
     "inventoryInfo",
     "addWarehouse",
     "editWarehouse",
-    "deleteWarehouse"
-  ]
+    "deleteWarehouse",
+  ];
+
+  const brainflixScreenshotsList = ["videoPage", "videoInfo", "upload"];
 
   return (
     <article className="projects" id="projects">
@@ -71,12 +74,12 @@ export default function Projects() {
               Ha.BIT - A Gamified Productivity App
             </h1>
             <p className="projects__item-description">
-              Ha.BIT is a full-stack gamified productivity application designed to enhance
-              user productivity by transforming task management into an engaging
-              experience. Users can create and manage tasks, set timers, and
-              track progress while earning rewards and leveling up. The app
-              features comprehensive task management, gamification elements,
-              habit tracking, and visual progress dashboards.
+              Ha.BIT is a full-stack gamified productivity application designed
+              to enhance user productivity by transforming task management into
+              an engaging experience. Users can create and manage tasks, set
+              timers, and track progress while earning rewards and leveling up.
+              The app features comprehensive task management, gamification
+              elements, habit tracking, and visual progress dashboards.
             </p>
 
             <h1 className="projects__item-title">Tech Stack</h1>
@@ -112,28 +115,6 @@ export default function Projects() {
         </div>
 
         <div className="projects__item">
-          <div className="projects__item-screenshots">
-            <div className="projects__item-marquee instock-marquee">
-              {instockScreenshotsList.map((screenshot, key) => (
-                <img
-                  src={instockScreenshots[screenshot]}
-                  alt=""
-                  className="projects__item-img"
-                  key={key}
-                />
-              ))}
-
-              {/* images are duplicated to create a seamless look on the marquee */}
-              {instockScreenshotsList.map((screenshot, key) => (
-                <img
-                  src={instockScreenshots[screenshot]}
-                  alt=""
-                  className="projects__item-img"
-                  key={`dup-${key}`}
-                />
-              ))}
-            </div>
-          </div>
           <div className="projects__item-text">
             <h1 className="projects__item-title">
               InStock - Inventory Management
@@ -141,9 +122,9 @@ export default function Projects() {
             <p className="projects__item-description">
               InStock is a full-stack inventory management system developed to
               enhance scalability and performance for a Fortune 500 client. The
-              existing system was struggling under heavy traffic, and my team (5 people) was
-              tasked to address these challenges. This project was developed by
-              an Agile team using a modern tech stack.
+              existing system was struggling under heavy traffic, and my team (5
+              people) was tasked to address these challenges. This project was
+              developed by an Agile team using a modern tech stack.
             </p>
 
             <h1 className="projects__item-title">Tech Stack</h1>
@@ -168,6 +149,94 @@ export default function Projects() {
                 +
                 <a
                   href="https://github.com/notaika/InStock-API"
+                  className="projects__item-link"
+                >
+                  {" "}
+                  Back-end
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="projects__item-screenshots">
+            <div className="projects__item-marquee instock-marquee">
+              {instockScreenshotsList.map((screenshot, key) => (
+                <img
+                  src={instockScreenshots[screenshot]}
+                  alt=""
+                  className="projects__item-img"
+                  key={key}
+                />
+              ))}
+
+              {/* images are duplicated to create a seamless look on the marquee */}
+              {instockScreenshotsList.map((screenshot, key) => (
+                <img
+                  src={instockScreenshots[screenshot]}
+                  alt=""
+                  className="projects__item-img"
+                  key={`dup-${key}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="projects__item">
+          <div className="projects__item-screenshots">
+            <div className="projects__item-marquee brainflix-marquee">
+              {brainflixScreenshotsList.map((screenshot, key) => (
+                <img
+                  src={brainflixScreenshots[screenshot]}
+                  alt=""
+                  className="projects__item-img"
+                  key={key}
+                />
+              ))}
+
+              {/* images are duplicated to create a seamless look on the marquee */}
+              {brainflixScreenshotsList.map((screenshot, key) => (
+                <img
+                  src={brainflixScreenshots[screenshot]}
+                  alt=""
+                  className="projects__item-img"
+                  key={`dup-${key}`}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="projects__item-text">
+            <h1 className="projects__item-title">
+              BrainFlix - Video Streaming Platform
+            </h1>
+            <p className="projects__item-description">
+              BrainFlix is a prototype for a new video streaming platform
+              designed to support an entrepreneur's pitch to VCs. The
+              application integrates static function components, interactive
+              JavaScript elements, and a custom API to manage and display video
+              data, while JSON files were used for data persistence.
+            </p>
+
+            <h1 className="projects__item-title">Tech Stack</h1>
+            <div className="projects__stack">
+              <img src={sassIcon} alt="" className="projects__stack-img" />
+              <img src={jsIcon} alt="" className="projects__stack-img" />
+              <img src={reactIcon} alt="" className="projects__stack-img" />
+              <img src={nodeIcon} alt="" className="projects__stack-img" />
+              <img src={expressIcon} alt="" className="projects__stack-img" />
+            </div>
+
+            <div className="projects__item-links">
+              <h1 className="projects__item-title">Links</h1>
+              <div className="projects__item-links-container">
+                <a
+                  href="https://github.com/notaika/BrainFlix"
+                  className="projects__item-link"
+                >
+                  Front-end{" "}
+                </a>
+                +
+                <a
+                  href="https://github.com/notaika/BrainFlix-API"
                   className="projects__item-link"
                 >
                   {" "}
