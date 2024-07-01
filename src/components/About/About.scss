@@ -9,6 +9,7 @@
     &-title {
         font-size: 28px;
         text-align: center;
+        margin-bottom: 1.5rem;
 
         &-logo {
             height: 25px;
@@ -50,7 +51,6 @@
 
     &-title {
         @extend .about-title;
-        margin-bottom: 1rem;
         
         &-logo {
             @extend .about-title-logo;
