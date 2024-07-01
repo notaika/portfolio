@@ -18,7 +18,7 @@ export default function Navbar() {
                 </a>
             </li>
             <li className="navbar__list-item">
-                <a href="" className="navbar__list-title"> 
+                <a href="#projects" className="navbar__list-title"> 
                     <img src={projectsIcon} alt="" className="navbar__list-item-icon" />
                     <span className="navbar__list-text">Projects</span>
                 </a>
