@@ -1,0 +1,59 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins';
+
+
+.footer {
+    background-color: $primary-color;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+  
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      @include mixins.desktop {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  
+    &__info {
+      margin-bottom: 1rem;
+  
+      @include mixins.desktop {
+        margin-bottom: 0;
+      }
+  
+      p {
+        margin: 0.1rem 0;
+        font-size: 13px;
+      }
+    }
+
+
+  
+    &__socials {
+      display: flex;
+      margin-top: 1rem;
+  
+      @include mixins.desktop {
+        margin-top: 0;
+      }
+  
+      .footer__social-link {
+        margin: 0 0.5rem;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+      }
+  
+      .footer__social-icon {
+        height: 25px;
+      }
+    }
+  }
