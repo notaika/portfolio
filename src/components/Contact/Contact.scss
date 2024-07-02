@@ -1,0 +1,94 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins';
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+
+    &-title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        &-logo {
+            height: 25px;
+            margin-right: 0.5rem;
+        }
+    }
+    &__email {
+        font-weight: 700;
+    }
+    &__message {
+        font-size: 14px;
+        text-align: justify;
+        width: 80%;
+
+        @include mixins.tablet {
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        border: 1px solid $secondary-color;
+        position: relative;
+        padding: 1.5rem;
+        width: 81%;
+
+        &:after {
+            content: '';
+            position: absolute;
+            border: 1px solid $primary-color;
+            bottom: 4px;
+            left: 4px;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+            z-index: -2;
+        }
+    }
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid black;
+        margin: 2rem 0;
+        padding: 1rem 30%;
+        border: 1px solid $secondary-color;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            border: 1px solid $primary-color;
+            bottom: 4px;
+            left: 4px;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+            z-index: -2;
+        }
+    }
+    &__links {
+        margin-bottom: 0.5rem;
+        font-size: 14px;
+
+        @include mixins.tablet {
+            font-size: 16px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+        &-img {
+            height: 25px;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+    }
+}
